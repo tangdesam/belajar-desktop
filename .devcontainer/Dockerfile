@@ -9,14 +9,14 @@ RUN apt-get update && apt-get install -y \
     novnc \
     websockify \
     dbus-x11 \
-    x11-xserver-utils \
     && rm -rf /var/lib/apt/lists/*
 
-RUN sudo -u vscode mkdir -p /home/vscode/.vnc
+RUN mkdir -p /home/vscode/.config/tigervnc \
+    && chown -R vscode:vscode /home/vscode/.config
 
 COPY start-desktop.sh /usr/local/bin/start-desktop.sh
-RUN chmod +x /usr/local/bin/start-desktop.sh
+
+RUN chmod +x /usr/local/bin/start-desktop.sh \
+    && chown vscode:vscode /usr/local/bin/start-desktop.sh
 
 EXPOSE 6080
-
-CMD ["/usr/local/bin/start-desktop.sh"]

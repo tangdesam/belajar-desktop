@@ -1,14 +1,21 @@
 {
-  "name": "Linux Desktop",
+  "name": "Ubuntu XFCE Desktop",
+
   "build": {
     "dockerfile": "Dockerfile"
   },
+
   "forwardPorts": [6080],
+
   "portsAttributes": {
     "6080": {
       "label": "Linux Desktop",
+      "protocol": "http",
       "onAutoForward": "openBrowser"
     }
   },
+
+  "postStartCommand": "/usr/local/bin/start-desktop.sh",
+
   "remoteUser": "vscode"
 }
