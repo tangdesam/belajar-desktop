@@ -8,8 +8,7 @@ RUN apt-get update && apt-get install -y \
     tigervnc-standalone-server \
     novnc \
     websockify \
-    dbus-x11 \
-    && rm -rf /var/lib/apt/lists/*
+    dbus-x11
 
 RUN mkdir -p /home/vscode/.config/tigervnc \
     && chown -R vscode:vscode /home/vscode/.config
