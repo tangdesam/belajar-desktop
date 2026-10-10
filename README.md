@@ -1,5 +1,10 @@
 # belajar-desktop
-codespace dengan desktop environment
+Menjalankan Linux Desktop Environment (XFCE) pada github codespaces
+
+<details>
+    <summary>VNC password</summary>
+    surabaya
+</details>
 
 ## Install Firefox
 

@@ -20,7 +20,7 @@ mkdir -p "$VNC_DIR"
 
 if [ ! -f "$VNC_DIR/passwd" ]; then
     echo "Creating VNC password..."
-    echo "codespace" | tigervncpasswd -f > "$VNC_DIR/passwd"
+    echo "surabaya" | tigervncpasswd -f > "$VNC_DIR/passwd"
     chmod 600 "$VNC_DIR/passwd"
 fi
 
